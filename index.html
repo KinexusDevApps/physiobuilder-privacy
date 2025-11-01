@@ -3,144 +3,312 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - PhysioBuilder</title>
+    <title>PhysioBuilder - Professional Tool for PTs</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons -->
     <style>
-        :root {
-            --primary: #2e7ad8;
-            --text-primary: #1a202c;
-            --text-secondary: #718096;
-            --bg-main: #f8f9fa;
-            --bg-widget: #ffffff;
-            --border-color: #e2e8f0;
-            --border-radius: 12px;
-            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.7;
-            color: var(--text-primary);
-            background-color: var(--bg-main);
-            margin: 0;
-            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fc;
+            /* REMOVED: overflow-y: hidden; to allow safe scrolling within sections/page */
+            min-height: 100vh;
         }
+        .header-bg {
+            background-color: #1A2B42; /* Deep Midnight Blue */
+        }
+        .accent-color {
+            color: #00BFFF; /* Electric Cyan/Aqua */
+        }
+        .btn-primary {
+            background-color: #00BFFF; /* Electric Cyan/Aqua */
+            color: #1A2B42;
+            font-weight: 700;
+            transition: background-color 0.2s;
+            border-radius: 0.5rem; /* Ensure rounded corners on buttons */
+        }
+        .btn-primary:hover {
+            background-color: #00A3D9;
+        }
+        .nav-link {
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .nav-link.active {
+            font-weight: 700;
+            color: #00BFFF;
+        }
+        .policy-content {
+            white-space: pre-wrap; /* Preserve formatting for policy text */
+            text-align: left;
+            line-height: 1.6;
+        }
+        .section-padding {
+            padding: 4rem 1.5rem;
+        }
+        @keyframes fadeIn {
+}
 
-        .header {
-            background-color: var(--primary);
-            color: white;
-            padding: 2rem 1rem;
-            text-align: center;
-        }
-
-        .header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background-color: var(--bg-widget);
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            color: var(--primary);
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        p, li {
-            color: var(--text-secondary);
-            margin-bottom: 1rem;
-        }
-
-        strong {
-            color: var(--text-primary);
-        }
-
-        a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-        
-        .footer {
-            text-align: center;
-            margin-top: 3rem;
-            padding: 1rem;
-            font-size: 0.9rem;
-            color: #a0aec0;
-        }
     </style>
 </head>
-<body>
 
-    <div class="header">
-        <h1>PhysioBuilder</h1>
-        <p>Privacy Policy</p>
+<body class="text-gray-800">
+
+    <!-- Header / Navigation -->
+   <header class="header-bg shadow-lg sticky top-0 z-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo/Brand -->
+      <a href="#home" class="flex items-center space-x-3">
+        <img src="assets/images/MPCsemfundo.png" alt="PhysioBuilder Logo" class="h-10 w-auto">
+        <span class="text-2xl font-bold text-white tracking-wider">
+          Motion Plan <span class="accent-color">Creator</span>
+        </span>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex space-x-4 text-base font-medium">
+        <a href="#home" class="nav-link text-white hover:text-gray-300 active" data-target="home">Home</a>
+        <a href="#about" class="nav-link text-white hover:text-gray-300" data-target="about">About Us</a>
+        <a href="#features" class="nav-link text-white hover:text-gray-300" data-target="features">Features</a>
+        <a href="#download" class="nav-link btn-primary rounded-full px-4 py-2 text-xs hover:bg-white/90" data-target="download">Download</a>
+        <a href="#privacy-policy" class="nav-link text-white hover:text-gray-300" data-target="privacy-policy">Privacy Policy</a>
+      </nav>
     </div>
+  </div>
+</header>
 
-    <div class="container">
-        <p><strong>Effective Date:</strong> September 28, 2025</p>
 
-        <p>This Privacy Policy describes how Kinexus Dev ("we," "us," or "our") handles information in the PhysioBuilder mobile application (the "App").</p>
+    <main class="max-w-7xl mx-auto">
+        <!-- Home Section -->
+        <section id="home" class="section-padding active bg-white rounded-lg shadow-xl m-4 md:m-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-5xl font-extrabold text-gray-900 leading-tight mb-4">
+                        Professional Planning for <span class="accent-color">Motion Experts</span>
+                    </h1>
+                    <p class="mt-4 text-lg text-gray-900 font-semibold">
+                        Design, document, and deliver customized exercise programs instantly. PhysioBuilder is the dedicated productivity tool for <span class="font-bold">Physical Therapists and licensed health professionals.</span>
+                    </p>
+                    <div class="mt-8 space-y-4 text-gray-900">
+                        <p class="flex items-center text-gray-900">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00BFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Generate Branded, Professional PDF Handouts.
+                        </p>
+                        <p class="flex items-center text-gray-900">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00BFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-3"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            Organize Patients, Programs, and Templates Efficiently.
+                        </p>
+                        <p class="flex items-center text-gray-900">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00BFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-3"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>
+                            A Productivity Tool, Not a Medical Device (Policy Compliant).
+                        </p>
+                    </div>
+                    <a href="#download" class="mt-10 inline-block btn-primary px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all">
+                        Download Now
+                    </a>
+                </div>
+                <!-- Placeholder Image (Replace with your actual logo or product image) -->
+                <div class="p-8 hidden md:block">
+<img src="assets/images/MPCsemfundotexto.png" alt="PhysioBuilder Logo" class="rounded-xl shadow-2xl mx-auto md:mx-0 w-80">
+                </div>
+            </div>
+        </section>
 
-        <h2>1. The Core of Our Privacy: Your Data is Yours</h2>
-        <p>PhysioBuilder is designed with your privacy as a top priority. <strong>All data you enter into the app is stored exclusively on your local device.</strong> We do not have servers, we do not collect, see, share, or have any access to your patient information, exercise programs, or any other content you create.</p>
+        <!-- About Us Section -->
+        <section id="about" class="section-padding hidden bg-white rounded-lg shadow-xl m-4 md:m-8">
+            <h2 class="text-4xl font-bold text-center mb-6 text-gray-900">About PhysioBuilder</h2>
+            <div class="max-w-3xl mx-auto text-lg text-gray-900 space-y-6">
+                <p>
+                    PhysioBuilder was built by a professional (Caio Rocha) who understands the struggle of inefficient documentation in physical therapy and training. Our mission is to save you hours every week currently spent writing out exercise instructions, drawing models, and manually preparing patient handouts.
+                </p>
+                <p>
+                    We provide a focused, high-quality, single-purpose application: <span class="font-bold">to turn your professional expertise into polished, shareable PDF documents instantly.</span> The goal is to maximize your time spent with clients and minimize time spent on administrative tasks.
+                </p>
+                <p>
+                    Our core commitment is to compliance. The app operates as a <span class="font-bold">professional organizational and document generation utility</span>, placing the responsibility of prescription and diagnosis solely on the licensed practitioner (you), ensuring your practice remains efficient and legally sound.
+                </p>
+                <a href="#features" class="inline-block text-[#00BFFF] hover:text-[#00A3D9] font-semibold mt-4">
+                    See All Features →
+                </a>
+            </div>
+        </section>
 
-        <h2>2. Information You Provide</h2>
-        <p>While using the App, you may choose to enter and save the following information on your device:</p>
-        <ul>
-            <li><strong>Therapist and Clinic Information:</strong> Your name and your clinic's name.</li>
-            <li><strong>Patient Information:</strong> Your patients' names, contact details, and clinical notes.</li>
-            <li><strong>Exercise Programs:</strong> Custom exercise routines you build.</li>
-            <li><strong>User-Uploaded Images:</strong> Images from your device's gallery or camera that you add to the exercise library.</li>
-        </ul>
-        <p>This information is managed by you and remains on your device.</p>
+        <!-- Features Section -->
+        <section id="features" class="section-padding hidden">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Core Features</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1: PDF Generation -->
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1A2B42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="accent-color mb-4"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="10" x2="15" y1="13" y2="13"></line><line x1="10" x2="14" y1="17" y2="17"></line></svg>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Custom PDF Generation (via jPDF)</h3>
+                    <p class="text-gray-600">Instantly generate professional, brandable exercise programs as clean PDF files, ready for printing or digital sharing (email, WhatsApp, etc.).</p>
+                </div>
+                <!-- Feature 2: Image Library -->
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1A2B42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="accent-color mb-4"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Personal Image Library</h3>
+                    <p class="text-gray-600">Save and categorize your own models and demonstration photos directly in the app's private library for quick access when building plans.</p>
+                </div>
+                <!-- Feature 3: Patient/Plan Management -->
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1A2B42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="accent-color mb-4"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Efficient Patient & Template Management</h3>
+                    <p class="text-gray-600">Organize client records and save frequently used routines as templates to eliminate repetitive manual entry, saving you valuable time.</p>
+                </div>
+            </div>
+        </section>
 
-        <h2>3. How We Use Information</h2>
-        <p>The information you enter is used solely for the functionality of the App, allowing you to:</p>
-        <ul>
-            <li>Create and manage patient profiles.</li>
-            <li>Build, save, and assign exercise programs.</li>
-            <li>Generate PDF documents of exercise programs.</li>
-            <li>Customize the look and feel of the App and its exports.</li>
-        </ul>
+        <!-- Download Section -->
+        <section id="download" class="section-padding hidden bg-white rounded-lg shadow-xl m-4 md:m-8">
+            <h2 class="text-4xl font-bold text-center mb-4 text-gray-900">Get PhysioBuilder</h2>
+            <p class="text-center text-lg text-gray-600 mb-12">Choose your platform. The Desktop version is currently in development!</p>
 
-        <h2>4. Data Sharing and Disclosure</h2>
-        <p><strong>We do not share your data with anyone.</strong></p>
-        <p>The App includes features that allow <strong>you</strong> to share information under your own control:</p>
-        <ul>
-            <li><strong>Share PDF:</strong> This feature allows you to send a generated PDF to other applications on your device (e.g., email, messaging apps). This action is initiated by you, and the data is not sent to us.</li>
-            <li><strong>Export Data:</strong> This feature allows you to create a local backup file of your app data. This file is saved to your device, and you are responsible for its security.</li>
-        </ul>
+            <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+                <!-- Android Download -->
+                <div class="flex flex-col items-center p-6 border border-gray-200 rounded-xl shadow-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-4"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><line x1="12" x2="12" y1="15" y2="9"></line><line x1="15" x2="9" y1="12" y2="12"></line></svg>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-900">Mobile (Android)</h3>
+                    <p class="text-center text-gray-600 mb-4">The complete tool for generating your exercise plans wherever you are.</p>
+                    <a href="URL_DA_PLAY_STORE" target="_blank" class="btn-primary flex items-center px-6 py-3 rounded-lg shadow-md hover:bg-white/90">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M12 2a10 10 0 1 0 10 10 10 10 0 0 0-10-10zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path><path d="M12 6v6l4 2"></path></svg>
+                        Download on Play Store
+                    </a>
+                </div>
 
-        <h2>5. Data Security</h2>
-        <p>The security of your data is directly tied to the security of your mobile device. We recommend you use your device's security features, such as a screen lock, PIN, or biometric authentication, to protect all the information stored on it, including the data within PhysioBuilder.</p>
+                <!-- Desktop Waitlist -->
+                <div class="flex flex-col items-center p-6 border border-gray-200 rounded-xl shadow-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1A2B42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-4"><rect width="20" height="15" x="2" y="4" rx="2" ry="2"></rect><line x1="2" x2="22" y1="18" y2="18"></line><line x1="8" x2="16" y1="20" y2="20"></line></svg>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-900">Desktop (Windows/Linux)</h3>
+                    <p class="text-center text-gray-600 mb-4">Under development! Sign up to be the first to know about the launch.</p>
+                    <form action="MAILTO:kinexusdevapps@gmail.com?subject=PhysioBuilder Desktop Waitlist" method="post" enctype="text/plain" class="w-full max-w-sm">
+                        <input type="email" name="email" placeholder="Your best professional email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00BFFF]" required>
+                        <button type="submit" class="w-full mt-3 btn-primary px-6 py-2 rounded-lg shadow-md hover:bg-white/90 transition-colors">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
 
-        <h2>6. Children's Privacy</h2>
-        <p>The App is not intended for use by anyone under the age of 13. We do not knowingly collect any personally identifiable information from children.</p>
+        <!-- Privacy Policy Section -->
+        <section id="privacy-policy" class="section-padding hidden">
+            <h2 class="text-4xl font-bold text-center mb-6 text-gray-900">Privacy Policy</h2>
+            <div class="bg-white p-8 rounded-lg shadow-md max-w-4xl mx-auto text-gray-900">
 
-        <h2>7. Changes to This Privacy Policy</h2>
-        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy within the App's "About" section and updating the "Effective Date" at the top of this page.</p>
+                <!-- Explicit Non-Medical Disclaimer (Reinforced Compliance) -->
+                <p class="text-lg font-bold mb-6 text-red-700">
+                    LEGAL NOTICE: PhysioBuilder is NOT a medical device. It is a documentation and productivity utility intended exclusively for licensed health and fitness professionals.
+                </p>
 
-        <h2>8. Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, you can contact us at:</p>
-        <p><strong>Email:</strong> <a href="mailto:Your-Email-Here@example.com">Your-Email-Here@example.com</a></p>
-    </div>
+                <p class="text-sm font-semibold mb-4 text-gray-800">
+                    This document is linked to the PhysioBuilder Terms and Conditions of Service.
+                </p>
+                <div class="policy-content text-gray-700">
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">1. Data Collection & Use</h3>
+                    <p>
+                        The PhysioBuilder application is designed as a professional productivity tool and operates primarily offline. We do not collect personally identifiable information (PII) for marketing purposes. The email collected on the download page is solely for launch notifications and will not be shared.
+                    </p>
+                    <h3 class="text-xl font-bold mt-4 mb-2 text-gray-900">2. Data Storage (On-Device)</h3>
+                    <p>
+                        All user-inputted data, including patient names, exercise plans, custom templates, and custom images, are stored locally on the user's device using the browser's local storage capabilities (indexedDB or localStorage within the WebView). This data is not transmitted to our servers unless the user explicitly performs a manual data export/backup.
+                    </p>
+                    <h3 class="text-xl font-bold mt-4 mb-2 text-gray-900">3. Third-Party Access</h3>
+                    <p>
+                        We utilize the jsPDF library solely for generating exercise programs into PDF files on the client-side. No data is sent to jspdf servers. We do not use third-party analytics or advertising services that track personal data.
+                    </p>
+                    <h3 class="text-xl font-bold mt-4 mb-2 text-gray-900">4. Legal Disclaimer</h3>
+                    <p>
+                        As a documentation tool, the professional user is solely responsible for the content, prescription, and suitability of the plans they generate using the software. Users should always consult a licensed healthcare provider for medical advice, diagnosis, or treatment.
+                    </p>
+                    <h3 class="text-xl font-bold mt-4 mb-2 text-gray-900">4. Contact Us</h3>
+                    <p>
+                    Contact us by email: kinexusdevapps@gmail.com
+                  </p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <div class="footer">
-        &copy; 2025 Kinexus Dev. All Rights Reserved.
-    </div>
+    <!-- Footer -->
+    <footer class="bg-gray-100 mt-12 py-8 text-sm text-center text-gray-600">
+        <p>PhysioBuilder © 2025. All rights reserved.</p>
+        <p class="mt-2">
+            <a href="#privacy-policy" class="text-gray-600 hover:text-[#00BFFF] nav-link" data-target="privacy-policy">Privacy Policy</a> |
+            <a href="#about" class="text-gray-600 hover:text-[#00BFFF] nav-link" data-target="about">About Us</a>
+        </p>
+        <p class="mt-4">
+            Designed for licensed Physical Therapists and Health Professionals.
+        </p>
+    </footer>
+
+    <!-- JavaScript for Navigation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            const navigateTo = (targetId) => {
+                // 1. Hide all sections
+                sections.forEach(section => {
+                    section.classList.add('hidden');
+                });
+
+                // 2. Show the target section
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.classList.remove('hidden');
+                    // Enable scrolling on the main content area for the current section
+                    document.body.style.overflowY = 'auto';
+                } else {
+                    // Fallback: If section not found, prevent body scroll
+                    document.body.style.overflowY = 'hidden';
+                }
+
+                // 3. Update active state on links
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').substring(1) === targetId) {
+                         // Only set the 'active' class for the text-based links, not the button.
+                        if (!link.classList.contains('btn-primary')) {
+                            link.classList.add('active');
+                        }
+                    }
+                });
+            };
+
+            // Handle navigation from hash change or click
+            const handleNavigation = () => {
+                // Default to 'home' if no hash, or use the hash
+                let targetId = window.location.hash ? window.location.hash.substring(1) : 'home';
+
+                // If the hash is empty or the user manually clears it, default to home
+                if (targetId === '') {
+                    targetId = 'home';
+                }
+
+                navigateTo(targetId);
+            };
+
+            // Set up initial navigation state
+            handleNavigation();
+
+            // Listen for link clicks
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href').substring(1);
+                    window.location.hash = targetId;
+                    // navigateTo is called by hashchange listener, but we call it here for redundancy/speed
+                    navigateTo(targetId);
+                });
+            });
+
+            // Listen for browser back/forward buttons
+            window.addEventListener('hashchange', handleNavigation);
+        });
+    </script>
 
 </body>
 </html>
